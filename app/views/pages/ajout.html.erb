@@ -1,0 +1,26 @@
+<h1>Ajouter un utilisateur</h1>
+<%= form_tag "/pages/ajout", method: :post do %>
+  <label for="user_nom">Nom :</label>
+  <input id="user_nom" type="text" name="Nom" /></br>
+  
+  <label for="user_prenom">Prenom :</label>
+  <input id="user_prenom" type="text" name="Prenom" /></br>
+  
+  <label for="user_role">Role :</label>
+  <select name="Role" id="user_role">
+    <option value="Admin">Admin</option>
+    <option value="Commercial">Commercial</option>
+    <option value="Normal">Normal</option>
+  </select></br>
+
+  <label for="user_mail">Email :</label>
+  <input id="user_mail" type= "text" name="Email" /></br>
+  
+  <label for="user_mdp">Mot de passe :</label>
+  <input id="user_mdp" type= "password" name="mdp" /></br>
+  
+  <label for="user_mdp_confirm">Confirmation du mot de passe :</label>
+  <input id="user_mdp_confirm" type= "password" name="mdp_confirmation" /></br>
+  
+  <input type="submit" value="Ajouter l'utilisateur" />
+<% end %>

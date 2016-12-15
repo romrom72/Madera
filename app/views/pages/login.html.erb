@@ -1,0 +1,12 @@
+<h1>Connexion à votre espace</h1>
+<a href="/pages/home">Retourner à l'accueil</a>
+
+<%= form_tag "/pages/login", method: :post do %>
+  <label for="user_login">Mail :</label>
+  <input id="user_login" type="text" name="name" /><br />
+  
+  <label for="user_mdp">Mot de passe :</label>
+  <input id="user_mdp" type="password" name="password" /><br />
+  
+  <input type="submit" value="Se connecter" />
+<% end %>

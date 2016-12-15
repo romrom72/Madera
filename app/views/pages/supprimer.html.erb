@@ -1,0 +1,10 @@
+<h1><%= @user.prenomUtilisateur %></h1>
+
+<%= form_tag "/pages/#{@user.id}", method: :patch do %>
+  <input type="text" name="prenom" value="<%= @user.prenomUtilisateur %>" />
+  <input type="submit" value="Modifier l'utilisateur" />
+<% end %>
+
+<%= form_tag "/pages/#{@user.id}", method: :delete do %>
+  <input type="submit" value="Supprimer l'utilisateur" />
+<% end %>

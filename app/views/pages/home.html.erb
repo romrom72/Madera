@@ -1,0 +1,15 @@
+<% if @current_user %>
+    <% if @current_user.typeUtilisateur == "Admin" %>
+        <h1>Bienvenue admin <%= @current_user.prenomUtilisateur %> !</h1>
+        <a href="/pages/admin">Liste des utilisateurs</a>
+        <a href="/pages/ajout">Ajouter un utilisateur</a>
+    <% else %>
+        <h1>Bienvenue <%= @current_user.prenomUtilisateur %> !</h1>
+    <% end %>
+    <%= form_tag "/pages/login", method: :delete do %>
+        <input type="submit" value="Déconnexion" />
+    <% end %>
+<% else %>
+    <h1>Bienvenue visiteur</h1>
+    <a href="/pages/login">S'identifier</a>
+<% end %>
